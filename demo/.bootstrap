@@ -1,5 +1,13 @@
 #!/bin/bash
 
-apt-get install mysql-server
+echo install: --no-ri --no-rdoc > ~/.gemrc
+echo update: --no-ri --no-rdoc >> ~/.gemrc
 
+
+DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server libmysqlclient-dev
+gem install bundler
+
+
+cd /vagrant
+bundle install
 
