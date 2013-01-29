@@ -4,11 +4,17 @@ echo install: --no-ri --no-rdoc > ~/.gemrc
 echo update: --no-ri --no-rdoc >> ~/.gemrc
 
 
-DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server libmysqlclient-dev g++ screen \
-	apache2-utils
+DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server \
+	libmysqlclient-dev g++ screen \
+	apache2-utils curl
 gem install bundler
 
 
 cd /vagrant
+
+[[ -e /usr/share/mysql/wikimedia_hits.ssv ]] || ./getdata.sh
+
 bundle install
+
+[[ -e /var/lock/imported.lock ]] || ruby db_create.rb && touch /var/lock/imported.lock
 
