@@ -20,32 +20,23 @@
 
 .notes tendency toward disorder, ends up in the DB
 
-!SLIDE
-# find a rock (something to push uphill)
-.notes dumbest method possible, show processlist
-.notes do AB on "web app" loading things, like a count of comments, from active users, show "out of
-connections errors"
-
-!SLIDE
-# push the rock
-.notes add caching, run test again
-.notes WHAT?!
-
-!SLIDE
-# quit running this query, cache it!
-.notes how do we prevent stuff from coming downhill?
-
 !SLIDE center
 ![photofarmer](7949872568_ba8f714d82.jpg)
 
 !SLIDE
 # will work for MySQL?
+I'm looking for someone to join my team!  
 
+ReverbNation is hiring: frontend and full-stack web
+developers, DevOps
+
+[http://www.reverbnation.com](http://reverbnation.theresumator.com/apply)
 
 
 
 !SLIDE 
-# [drasch](http://twitter.com/drasch)
+# [twitter: @drasch](http://twitter.com/drasch)
+# [github: drasch](http://github.com/drasch)
 
 - iContact
 -- from 2 to 300 employees
@@ -59,3 +50,4 @@ connections errors"
 - [photofarmer](http://www.flickr.com/photos/photofarmer/7949872568/)
 - [exalted](http://www.flickr.com/photos/exalted/137720685/)
 - [spicuzza](http://www.flickr.com/photos/spicuzza/4661202721/)
+

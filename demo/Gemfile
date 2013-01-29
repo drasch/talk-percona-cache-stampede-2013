@@ -3,3 +3,4 @@ source "http://rubygems.org"
 gem 'sinatra'
 gem 'vagrant', :require => false
 gem 'mysql2'
+gem 'dalli'
