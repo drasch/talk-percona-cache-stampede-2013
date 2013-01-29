@@ -5,11 +5,6 @@ require 'dalli'
 
 
 class App < Sinatra::Base
-  @@counter = 0
-
-  def db
-    @client ||= Mysql2::Client.new(:database => "test")
-  end
 
   get '/v1' do
     @data = db.query("select code, count(*) as ct from wikimedia_hits group by 1 order by 2 desc limit 10")
@@ -32,18 +27,22 @@ class App < Sinatra::Base
 
 
 
+
+
   get '/v2' do
     @data = db.query("select code, count(*) as ct from wikimedia_hits group by 1 order by 2 desc limit 10")
 
-    periodically { db.query("update wikimedia_hits set hits= hits +1 where id = 1")}
+    db.query("update wikimedia_hits set hits= hits +1 where id = 1")
 
     erb :data
   end
 
-  def periodically(num=50)
-    @@counter = (@@counter || 0) + 1
-    yield if @@counter % num == 0
-  end
+
+
+
+
+
+
 
 
 
@@ -56,6 +55,31 @@ class App < Sinatra::Base
 
 
   get '/v3' do
+    @data = db.query("select code, count(*) as ct from wikimedia_hits group by 1 order by 2 desc limit 10")
+
+    periodically { db.query("update wikimedia_hits set hits= hits +1 where id = 1")}
+
+    erb :data
+  end
+
+  def periodically(num=50)
+    @@counter = (@@counter || 0) + 1
+    yield if @@counter % num == 1
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+  get '/v4' do
     @data = dalli.fetch(:top_hits, 10) do
       db.query("select code, count(*) as ct from wikimedia_hits group by 1 order by 2 desc limit 10").collect(&:to_hash)
     end
@@ -82,7 +106,7 @@ class App < Sinatra::Base
 
 
 
-  get '/v4' do
+  get '/v5' do
     @data = fetch_safe(:top_hits_safe, 10) do
       db.query("select code, count(*) as ct from wikimedia_hits group by 1 order by 2 desc limit 10").collect(&:to_hash)
     end
@@ -90,6 +114,20 @@ class App < Sinatra::Base
 
     erb :data
   end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   def fetch_safe(key, ttl)
     result = dalli.get(key)
@@ -112,6 +150,23 @@ class App < Sinatra::Base
     end
 
     @data
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+  @@counter = 0
+
+  def db
+    @client ||= Mysql2::Client.new(:database => "test")
   end
 
 
