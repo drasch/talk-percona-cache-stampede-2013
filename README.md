@@ -1,14 +1,20 @@
 # Percona University 2013
 
 ## dependencies
-  $ gem install bundler
-  $ bundle install
+<pre>
+$ gem install bundler
+$ bundle install
+</pre>
 
 ## see slides
-  $ showoff serve
+<pre>
+$ showoff serve
+</pre>
 
 
 ## try demo
-  $ cd demo
-  $ vagrant up
-  $ vagrant ssh
+<pre>
+$ cd demo
+$ vagrant up
+$ vagrant ssh
+</pre>
