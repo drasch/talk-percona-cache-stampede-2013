@@ -1,26 +1,24 @@
-!SLIDE
-in the trenches
+!SLIDE center
+![me](saadandalib_6954076459_caab6673d3.jpg)
+# in the trenches
 
-!SLIDE
-# real web applications
-- iContact
-- Reverbnation
+!SLIDE center
+# the battlefield
+![spicuzza](island_spicuzza_4661202721_aaa3efd883.jpg)
 
-.notes  - from 2 to 300 employees
-.notes  - scaled from 100k emails per day over to 75 million
-.notes - 2 million artists
+.notes product, bad actors, success, old data, old code, our position: keep things going!
 
-!SLIDE
-# being just a DBA sucks
-.notes photo of nerd guy with lots of pc parts or wires or something
+!SLIDE center
+# DBA
+![exalted](nerd_137720685_0aebe5ba57.jpg)
+
 .notes who here is a "dba"?
-.notes photo of folks looking down at mysql?
 
-!SLIDE
+!SLIDE center
 # this is most every web app
-.notes upside down pyramid, DB at the bottom
+![webapp](webapp.JPG)
+
 .notes tendency toward disorder, ends up in the DB
-.notes query cache?!
 
 !SLIDE
 # find a rock (something to push uphill)
@@ -37,3 +35,27 @@ connections errors"
 # quit running this query, cache it!
 .notes how do we prevent stuff from coming downhill?
 
+!SLIDE center
+![photofarmer](7949872568_ba8f714d82.jpg)
+
+!SLIDE
+# will work for MySQL?
+
+
+
+
+!SLIDE 
+# [drasch](http://twitter.com/drasch)
+
+- iContact
+-- from 2 to 300 employees
+-- from 100k emails per day over to 75 million
+- Reverbnation
+-- 2 million artists
+
+!SLIDE smbullets
+### Photo credits
+- [saadandalib](http://www.flickr.com/photos/saadandalib/6954076459/)
+- [photofarmer](http://www.flickr.com/photos/photofarmer/7949872568/)
+- [exalted](http://www.flickr.com/photos/exalted/137720685/)
+- [spicuzza](http://www.flickr.com/photos/spicuzza/4661202721/)
