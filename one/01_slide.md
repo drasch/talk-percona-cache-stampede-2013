@@ -50,6 +50,8 @@
 - [exalted](http://www.flickr.com/photos/exalted/137720685/)
 - [spicuzza](http://www.flickr.com/photos/spicuzza/4661202721/)
 
+!SLIDE center
+# thanks
 
 !SLIDE center
 # questions?
