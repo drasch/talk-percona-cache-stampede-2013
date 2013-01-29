@@ -29,6 +29,9 @@ class App < Sinatra::Base
 
 
 
+
+
+
   get '/v2' do
     @data = db.query("select code, count(*) as ct from wikimedia_hits group by 1 order by 2 desc limit 10")
 
@@ -57,7 +60,7 @@ class App < Sinatra::Base
   get '/v3' do
     @data = db.query("select code, count(*) as ct from wikimedia_hits group by 1 order by 2 desc limit 10")
 
-    periodically { db.query("update wikimedia_hits set hits= hits +1 where id = 1")}
+    periodically { db.query("update wikimedia_hits set hits= hits +50 where id = 1")}
 
     erb :data
   end
