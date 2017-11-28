@@ -5,8 +5,9 @@ echo update: --no-ri --no-rdoc >> ~/.gemrc
 
 
 DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server \
-	libmysqlclient-dev g++ screen httping \
-	apache2-utils curl memcached libmemcache-dev
+	libmysqlclient-dev g++ screen \
+	apache2-utils curl memcached libmemcached-dev \
+	ruby ruby-dev libffi-dev build-essential libmysqlclient-dev
 gem install bundler
 
 
