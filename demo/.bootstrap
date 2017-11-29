@@ -13,7 +13,7 @@ gem install bundler
 
 cd /vagrant
 
-[[ -e /usr/share/mysql/wikimedia_hits.ssv ]] || ./getdata.sh
+[[ -e /var/lib/mysql-files/wikimedia_hits.ssv ]] || ./getdata.sh
 
 bundle install
 

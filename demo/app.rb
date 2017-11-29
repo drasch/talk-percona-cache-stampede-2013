@@ -169,7 +169,7 @@ class App < Sinatra::Base
   @@counter = 0
 
   def db
-    @client ||= Mysql2::Client.new(:database => "test")
+    @client ||= Mysql2::Client.new(:username => "test", :password => "testpass", :database => "test")
   end
 
 
