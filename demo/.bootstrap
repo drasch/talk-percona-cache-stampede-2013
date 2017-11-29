@@ -3,9 +3,10 @@
 echo install: --no-ri --no-rdoc > ~/.gemrc
 echo update: --no-ri --no-rdoc >> ~/.gemrc
 
+[[ -e /var/lib/misc/update.lock ]] || apt-get update && touch /var/lib/misc/update.lock
 
 DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server \
-	libmysqlclient-dev g++ screen \
+	libmysqlclient-dev g++ screen httping\
 	apache2-utils curl memcached libmemcached-dev \
 	ruby ruby-dev libffi-dev build-essential libmysqlclient-dev
 gem install bundler

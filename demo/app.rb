@@ -1,8 +1,7 @@
 require 'rubygems'
-require 'sinatra/base'
+require 'sinatra'
 require 'mysql2'
 require 'dalli'
-
 
 class App < Sinatra::Base
 
@@ -87,7 +86,7 @@ class App < Sinatra::Base
       db.query("select code, count(*) as ct from wikimedia_hits group by 1 order by 2 desc limit 10").collect(&:to_hash)
     end
 
-    periodically { db.query("update wikimedia_hits set hits= hits +1 where id = 1")}
+    db.query("update wikimedia_hits set hits= hits +1 where id = 1")
 
     erb :data
   end
@@ -173,6 +172,7 @@ class App < Sinatra::Base
   end
 
 
+  set :bind, '0.0.0.0'
   # start the server if ruby file executed directly
   run! if app_file == $0
 end
