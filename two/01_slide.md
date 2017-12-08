@@ -8,9 +8,9 @@
 
 - iContact
   - from 2 to 300 employees
-  - from 100k emails per day over to 75 million
+  - from 2k emails per day to 75 million
 - ReverbNation
-  - 4 million artists
+  - grow from 2 million to 4 million artists
 - 3 Birds Marketing
   - 200 Car Dealers
 
@@ -24,11 +24,12 @@ product, bad actors, success, old data, old code, our position: keep things goin
 
 
 !SLIDE center
-# the call
+# it's slow
 ![exalted](nerd_137720685_0aebe5ba57.jpg)
 
 ~~~SECTION:notes~~~
-"it's slow"
+going to tell a story about the evolution of a product
+demo that it's slow, show updates
 ~~~ENDSECTION~~~
 
 !SLIDE center
@@ -40,16 +41,15 @@ tendency toward disorder, ends up in the DB
 ~~~ENDSECTION~~~
 
 !SLIDE center
+# caching
+![webapp](cash.jpg)
+
+~~~SECTION:notes~~~
+tendency toward disorder, ends up in the DB
+~~~ENDSECTION~~~
+
+!SLIDE center
 ![photofarmer](7949872568_ba8f714d82.jpg)
-
-!SLIDE bullets smbullets
-# ReverbNation is hiring
-- my team!
-- frontend developer
-- full-stack web developers
-- DevOps
-
-[http://www.reverbnation.com](http://reverbnation.theresumator.com/apply)
 
 !SLIDE 
 # Photo credits
@@ -57,6 +57,7 @@ tendency toward disorder, ends up in the DB
 - [photofarmer](http://www.flickr.com/photos/photofarmer/7949872568/)
 - [exalted](http://www.flickr.com/photos/exalted/137720685/)
 - [spicuzza](http://www.flickr.com/photos/spicuzza/4661202721/)
+- [cash](https://www.flickr.com/photos/68751915@N05/6355816649)
 
 !SLIDE center
 # thanks
